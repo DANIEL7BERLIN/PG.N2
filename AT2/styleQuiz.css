@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(img/floresta2.png) no-repeat;
+    font-family: 'Literata';
+}
+
+.app{
+    margin: 100px auto 0;
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 3px;
+}
+
+.app h1{
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn{
+    font-size: 15px;
+    background: #fff;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 8px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: black;
+    color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background-color: #185a26;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#explica{
+    background: none;
+    border: none;
+    margin-top: 14px;
+    display: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.correto{
+    background: #9aeabc;
+}
+
+.errado{
+    background: #ff9393;
+}
+
+#janela{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#modal p{
+    text-align: justify;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+}
+
+#fechar-modal{
+    margin-top: 20px;
+    background-color: #185a26;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.voltar{
+    position: fixed;
+    right: 50px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 70px;
+}
+
+.voltar img{
+    width: 36px;
+}
+
+/*inicio rodape*/
+
+.rodape{
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+	background-color: #185a26;
+    padding: 15px 0;
+	margin-top: 200px;
+}
+
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+
+.rodape .row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.linha{
+	list-style: none;
+}
+
+.rodape-col{
+	width: 25%;
+	padding: 0 15px;
+}
+
+.rodape-col h4{
+	font-size: 18px;
+	color: white;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	font-weight: 500;
+	position: relative;
+}
+
+.rodape-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #eccc98;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.rodape-col .linha :not(:last-child){
+	margin-bottom: 10px;
+}
+
+.rodape-col .linha a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+	color: white;
+	display: block;
+	transition: all 0.3s ease;
+}
+.rodape-col .linha a:hover{
+	color: rgba(245, 245, 245, 0.741);
+	padding-left: 8px;
+}
+
+.footer-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .footer-info a {
+    color: white;
+    text-decoration: none;
+}
+
+/*fim rodape*/

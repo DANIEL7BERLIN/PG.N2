@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-image: url('barco.jpeg'); /* Substitua pelo nome da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #000000;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Sobreposição para melhorar legibilidade */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  .carta {
+    background-image: url('carta.png'); /* <- imagem da carta que você enviou */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 650px;
+    padding: 60px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .titulo {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    color: #000000;
+  }
+  
+ 
+  h2,h3 {
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-family: 'Irish Grover'
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Inria Serif';
+    text-align: justify;
+
+  }
+
+  .personagem-curiosidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+    width: 100px;
+    transition: transform 0.3s ease;
+  }
+  
+  .personagem-curiosidade img {
+    width: 100%;
+  }
+  
+  .personagem-curiosidade:hover {
+    transform: scale(1.05);
+  }
+  
+  .curiosidade-card {
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+    background-color: #fff6e5;
+    color: #000;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    max-width: 300px;
+    display: none;
+    z-index: 20;
+    font-family: 'Inria Serif', serif;
+  }
+  
+  .curiosidade-card button {
+    margin-top: 10px;
+    background-color: #8b5e3c;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  
+  
+  
+  
