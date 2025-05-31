@@ -1,0 +1,166 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .container {
+    margin: 2rem 15%;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  img, video {
+    max-width: 100%;
+    margin:0rem 0;
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .line {
+    display: flex;
+    align-items: flex-start; /* Alinha pelo topo */
+    gap: 2rem;
+  }
+  
+  .imagem-box {
+    flex: 0 0 30%;
+  }
+  
+  .imagem-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 5px;
+    background: #fff;
+  }
+  
+  .texto-box {
+    flex: 0 0 65%;
+    background: #fafafa;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    text-align: justify; /* Deixa o texto justificado */
+  }
+  
+  
+  .home-fundo {
+    position: relative;
+    overflow: hidden;
+    height: 90vh; /* 90% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+.home-fundo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 90%;
+  background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  animation: zoom 10s infinite alternate ease-in-out;
+}
+
+.home-fundo::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* camada escura */
+  z-index: 2;
+}
+
+.conteudo-home {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+nav a.ativo {
+  border-bottom: 2px solid #fff; /* linha branca embaixo */
+  padding-bottom: 2px;
+  color: #ffd700; /* opcional: cor dourada para destaque */
+  transition: all 0.3s ease; /* Suaviza o efeito */
+}
+  
+/* EFEITO ao passar o mouse no link ativo */
+nav a.ativo:hover {
+  color: #ff4500; /* Muda para laranja forte */
+  border-bottom: 2px solid #ff4500; /* Linha também muda para laranja */
+  transform: scale(1.1); /* Dá um leve "zoom" no texto */
+}
+
+
+
+
+
+
+
+
+/* EFEITOS PARA O VIDEO INDEX_VIDEO */
+
+.video-container {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%; /* Agora 100% da altura da seção home-fundo */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* Impede clique no vídeo */
+}
